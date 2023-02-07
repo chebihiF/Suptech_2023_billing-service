@@ -21,7 +21,7 @@ public class BillRestController {
         return billService.getBill(id);
     }
 
-    @GetMapping("/bills/{customerId}")
+    @GetMapping("/bills/byCustomer/{customerId}")
     public List<BillResponseDTO> getBillsByCustomer(@PathVariable(name = "customerId") Long customerID){
         return billService.billsByCustomer(customerID);
     }
